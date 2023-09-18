@@ -1,0 +1,21 @@
+.d-center {
+  display: grid;
+  place-content: center;
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.d-jus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

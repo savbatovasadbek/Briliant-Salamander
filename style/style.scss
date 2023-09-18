@@ -1,0 +1,152 @@
+// Import luyout.scss
+@import "../sass/layout";
+
+// main
+main {
+  background-image: url("../images/mainBg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  .container {
+    position: relative;
+
+    header {
+      margin-top: 48px;
+      margin-bottom: 100px;
+      .headerleft {
+        @include d-flex-gap(59px);
+
+        .logo {
+          a {
+            @include d-flex-gap(11px);
+            @include active();
+            h4 {
+              color: $text-dark;
+              //   font-family: "Poppins";
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 800;
+              line-height: 97.827%;
+              letter-spacing: -0.84px;
+
+              span {
+                color: $color-primary;
+                font-family: "Poppins";
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 97.827%;
+                letter-spacing: -0.84px;
+              }
+            }
+          }
+        }
+
+        nav {
+          ul {
+            @include d-flex-gap(55px);
+
+            li {
+              padding: 6px 0;
+              position: relative;
+
+              a {
+                color: $text-grey;
+                // font-family: "Poppins";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: -0.64px;
+                transition: all 0.4s ease;
+
+                &:last-child {
+                  @include d-flex-gap(14px);
+
+                  img {
+                    transition: all 0.4s ease;
+                  }
+                }
+              }
+
+              &::after {
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: $color-primary;
+                bottom: 0;
+                left: 50%;
+                content: "";
+                transform: translate(-50%) scale(0, 1);
+                transition: all 0.4s ease;
+              }
+
+              &:hover {
+                &::after {
+                  transform: translate(-50%) scale(1, 1);
+                }
+
+                a {
+                  color: $text-dark;
+
+                  &:last-child {
+                    img {
+                      transform: rotate(-180deg);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .headerRight {
+        @include d-flex-gap(40px);
+
+        .searchBox {
+          a {
+            display: block;
+            @include active();
+          }
+        }
+
+        .btn {
+          @include btnPink(24px, 47px);
+        }
+      }
+    }
+
+    .exploreBox {
+      width: 100%;
+
+      .exploreInsideBox {
+        .exploreHeader {
+          margin-bottom: 34px;
+          h2 {
+            color: $color-dark;
+            font-family: "DM Sans";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%;
+            letter-spacing: -0.9px;
+          }
+        }
+      }
+
+      .exploreTextBox {
+        @include d-flex-gap(24px);
+
+        .exploreText {
+          @include d-column(1px);
+        }
+      }
+    }
+  }
+}
+
+// foter
+#footer {
+}

@@ -1,0 +1,30 @@
+// Function
+@mixin d-flex-gap($gap) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin d-column($gap) {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin active {
+  transition: all 0.4s ease;
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@mixin btnActive() {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
